@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BestBall.Views.LeaderboardView">
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding PlayerScorecard}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <!--Hole 1-->
+                            <ColumnDefinition/>
+                            <!--Hole 2-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 3-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 4-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 5-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 6-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 7-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 8-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 9-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 10-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 11-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 12-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 13-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 14-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 15-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 16-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 17-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Hole 18-->
+                            <ColumnDefinition Width="*"/>
+                            <!--Total-->
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <!--Name-->
+                            <RowDefinition Height="*"/>
+                            <!--Scores-->
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.ColumnSpan="18" Grid.Row="0"
+                               Text="{Binding PlayerName}"/>
+                        <Label Grid.Column="0"  Grid.Row="1"
+                               Text="{Binding HoleScores[0]}"/>
+                        <Label Grid.Column="1"  Grid.Row="1"
+                               Text="{Binding HoleScores[1]}"/>
+                        <Label Grid.Column="2"  Grid.Row="1"
+                               Text="{Binding HoleScores[2]}"/>
+                        <Label Grid.Column="3"  Grid.Row="1"
+                               Text="{Binding HoleScores[3]}"/>
+                        <Label Grid.Column="4"  Grid.Row="1"
+                               Text="{Binding HoleScores[4]}"/>
+                        <Label Grid.Column="5"  Grid.Row="1"
+                               Text="{Binding HoleScores[5]}"/>
+                        <Label Grid.Column="6"  Grid.Row="1"
+                               Text="{Binding HoleScores[6]}"/>
+                        <Label Grid.Column="7"  Grid.Row="1"
+                               Text="{Binding HoleScores[7]}"/>
+                        <Label Grid.Column="8"  Grid.Row="1"
+                               Text="{Binding HoleScores[8]}"/>
+                        <Label Grid.Column="9"  Grid.Row="1"
+                               Text="{Binding HoleScores[9]}"/>
+                        <Label Grid.Column="10"  Grid.Row="1"
+                               Text="{Binding HoleScores[10]}"/>
+                        <Label Grid.Column="11"  Grid.Row="1"
+                               Text="{Binding HoleScores[11]}"/>
+                        <Label Grid.Column="12"  Grid.Row="1"
+                               Text="{Binding HoleScores[12]}"/>
+                        <Label Grid.Column="13"  Grid.Row="1"
+                               Text="{Binding HoleScores[13]}"/>
+                        <Label Grid.Column="14"  Grid.Row="1"
+                               Text="{Binding HoleScores[14]}"/>
+                        <Label Grid.Column="15"  Grid.Row="1"
+                               Text="{Binding HoleScores[15]}"/>
+                        <Label Grid.Column="16"  Grid.Row="1"
+                               Text="{Binding HoleScores[16]}"/>
+                        <Label Grid.Column="17"  Grid.Row="1"
+                               Text="{Binding HoleScores[17]}"/>
+                        <Label Grid.Column="18"  Grid.Row="1"
+                               Text="{Binding HoleScores[18]}"/>
+                        <Label Grid.Column="19" Grid.Row="0" Grid.RowSpan="2"
+                               Text="{Binding RoundScore}"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
